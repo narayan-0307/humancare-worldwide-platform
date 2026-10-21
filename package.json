@@ -1,0 +1,30 @@
+{
+    "name": "humancare-worldwide-platform",
+    "version": "1.0.0",
+    "private": true,
+    "description": "HumanCare Worldwide multi-application platform",
+    "engines": {
+        "node": ">=22"
+    },
+    "workspaces": [
+        "apps/admin-portal",
+        "apps/vendor-portal",
+        "apps/mobile-app",
+        "backend"
+    ],
+    "dependencies": {
+        "react": "19.3.0",
+        "react-dom": "19.3.0"
+    },
+    "scripts": {
+        "dev:admin": "npm run dev --workspace=admin-portal",
+        "dev:vendor": "npm run dev --workspace=vendor-portal",
+        "dev:mobile": "npm run start --workspace=mobile-app",
+        "dev:backend": "npm run dev --workspace=@humancare/backend",
+        "build:admin": "npm run build --workspace=admin-portal",
+        "build:vendor": "npm run build --workspace=vendor-portal",
+        "lint:admin": "npm run lint --workspace=admin-portal",
+        "lint:vendor": "npm run lint --workspace=vendor-portal",
+        "test:backend": "npm run test --workspace=@humancare/backend"
+    }
+}
